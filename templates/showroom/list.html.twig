@@ -1,0 +1,22 @@
+<table border="3">
+    <tr>
+        <th>nce</th>
+        <th>nom</th>
+        <th>description</th>
+        <th>Kilom</th>
+        <th>Actions</th>
+    </tr>
+    {% for c in show %}
+    <tr>
+        <td>{{c.nce}}</td>
+        <td>{{c.nom}}</td>
+        <td>{{c.dsecription}}</td>
+        <td>{{c.Kilom}}</td>
+        <td><form action="{{path('app_list_id',{'nce':c.nce})}}"><button type="submit" >Details</button></form></td>
+        <td><form action="{{path('app_update',{'nce':c.nce})}}"><button type="submit" >Update</button></form></td>
+        <td><form action="{{path('app_delete',{'nce':c.nce})}}"><button type="submit" >Delete</button></form></td>
+
+    </tr>
+    {% endfor %}
+    
+</table>

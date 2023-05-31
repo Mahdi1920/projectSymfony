@@ -1,0 +1,18 @@
+<table border="3">
+    <tr>
+        <th>nce</th>
+        <th>nom</th>
+        <th>description</th>
+        <th>Kilom</th>
+    </tr>
+    {% for c in showById %}
+    <tr>
+        <td>{{c.nce}}</td>
+        <td>{{c.nom}}</td>
+        <td>{{c.dsecription}}</td>
+        <td>{{c.Kilom}}</td>
+
+    </tr>
+    {% endfor %}
+    
+</table>
